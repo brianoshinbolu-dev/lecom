@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./auth.module.scss";
 import loginImg from "../../assets/login.png";
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import Card from "../../components/card/Card";
+import {signInWithPopup} from "firebase/auth";
 
 const Login = () => {
   return (
@@ -14,7 +15,7 @@ const Login = () => {
 
       <Card>
         <div className={styles.form}>
-          <h2>Login</h2>
+          <h2>Login 2</h2>
 
           <form>
             <input type="text" placeholder="Email" required />
@@ -31,7 +32,9 @@ const Login = () => {
           </button>
           <span className={styles.register}>
             <p>Dont have an Account?</p>
-            <Link to="/register"><strong>Register</strong></Link>
+            <Link to="/register">
+              <strong>Register</strong>
+            </Link>
           </span>
         </div>
       </Card>

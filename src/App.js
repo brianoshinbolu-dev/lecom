@@ -1,10 +1,11 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Footer } from "./components"; // import components
 import { Home, Contact, Login, Register, Reset } from "./pages"; // import pages
 
 function App() {
   return (
-    <>
+    <React.Fragment>
       <Router>
         <Header />
         <Routes>
@@ -16,8 +17,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-      App
-    </>
+    </React.Fragment>
   );
 }
 
